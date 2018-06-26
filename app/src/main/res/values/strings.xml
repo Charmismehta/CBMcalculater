@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">CBM calculater</string>
+
+    <string name="unit_prompt">Select Unit</string>
+    <string-array name="unit">
+        <item>mm</item>
+        <item>cm</item>
+        <item>m</item>
+        <item>inch</item>
+        <item>feet</item>
+        <item>yard</item>
+    </string-array>
 </resources>
