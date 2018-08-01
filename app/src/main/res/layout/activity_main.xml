@@ -5,384 +5,373 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/Gray"
     tools:context=".MainActivity">
+    <include layout="@layout/toolbar" />
 
-    <LinearLayout
-        android:layout_marginLeft="@dimen/_10sdp"
-        android:layout_marginRight="@dimen/_10sdp"
-        android:background="@drawable/grayborder"
-        android:layout_marginTop="@dimen/_20sdp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-    <Spinner
-        android:id="@+id/spinner1"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/_40sdp"
-        android:entries="@array/unit"
-        android:prompt="@string/unit_prompt" />
-    </LinearLayout>
-    <LinearLayout
-        android:background="@drawable/grayborder"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
 
-        <EditText
-            android:inputType="number"
-            android:id="@+id/et_length"
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_margin="5dp"
-            android:layout_weight="1"
-            android:background="@android:color/transparent"
-            android:gravity="center"
-            android:hint="Length"
-            android:textColor="@color/black"
-            android:textColorHint="@color/Gray" />
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-        <ImageView
-            android:layout_gravity="center"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/vc_close"/>
-        <EditText
-            android:inputType="number"
-            android:id="@+id/et_width"
-            android:textColor="@color/black"
-            android:gravity="center"
-            android:layout_gravity="center"
-            android:hint="Width"
-            android:textColorHint="@color/Gray"
-            android:layout_margin="5dp"
-            android:layout_weight="1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@android:color/transparent"
-            />
-        <ImageView
-            android:layout_gravity="center"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/vc_close"/>
-        <EditText
-            android:inputType="number"
-            android:id="@+id/et_height"
-            android:textColor="@color/black"
-            android:gravity="center"
-            android:layout_gravity="center"
-            android:hint="Height"
-            android:textColorHint="@color/Gray"
-            android:layout_margin="5dp"
-            android:layout_weight="1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@android:color/transparent"
-            />
-    </LinearLayout>
-    <View
-        android:layout_marginTop="@dimen/_5sdp"
-        android:layout_width="match_parent"
-        android:layout_height="0.5dp"
-        android:background="@color/black"/>
-<LinearLayout
-    android:padding="@dimen/_5sdp"
-    android:orientation="horizontal"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:background="@drawable/grayborder">
 
-<TextView
-    android:id="@+id/tv_cbm"
-    android:layout_marginBottom="@dimen/_5sdp"
-    android:layout_gravity="center"
-    android:layout_weight="1"
-    android:layout_width="@dimen/_170sdp"
-    android:layout_height="wrap_content"
-    android:text="CBM"
-    android:layout_marginTop="@dimen/_10sdp"
-    android:layout_marginLeft="@dimen/_10sdp"
-    android:textSize="@dimen/_20sdp"
-    android:textColor="@color/black" />
+                <Spinner
+                    android:id="@+id/Spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_30sdp"
+                    android:entries="@array/unit"
+                    android:prompt="@string/unit_prompt" />
+            </LinearLayout>
 
-    <ImageView
-        android:layout_marginBottom="@dimen/_5sdp"
-        android:layout_marginTop="@dimen/_10sdp"
-        android:layout_gravity="center"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/vc_equals"/>
+            <LinearLayout
+                android:id="@+id/llAddCustomView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
-    <EditText
-        android:id="@+id/et_cbm"
-        android:layout_marginBottom="@dimen/_5sdp"
-        android:layout_marginLeft="@dimen/_10sdp"
-        android:layout_marginTop="@dimen/_10sdp"
-        android:textColor="@color/black"
-        android:layout_gravity="center"
-        android:textColorHint="@color/Gray"
-        android:layout_weight="1"
-        android:layout_width="@dimen/_200sdp"
-        android:layout_height="wrap_content"
-        android:background="@drawable/grayborder"
-        />
-    <TextView
-        android:layout_marginBottom="@dimen/_5sdp"
-        android:layout_gravity="center"
-        android:layout_weight="1"
-        android:layout_width="@dimen/_240sdp"
-        android:layout_height="wrap_content"
-        android:text="Cubic meter"
-        android:layout_marginTop="@dimen/_10sdp"
-        android:layout_marginLeft="@dimen/_10sdp"
-        android:textSize="@dimen/_20sdp"
-        android:textColor="@color/black" />
-</LinearLayout>
+            </LinearLayout>
 
-    <View
-        android:layout_marginTop="@dimen/_5sdp"
-        android:layout_width="match_parent"
-        android:layout_height="0.5dp"
-        android:background="@color/black"/>
-    <LinearLayout
-        android:padding="@dimen/_5sdp"
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
 
-        <TextView
-            android:id="@+id/tv_cft"
-            android:layout_marginBottom="@dimen/_5sdp"
-            android:layout_gravity="center"
-            android:layout_weight="1"
-            android:layout_width="@dimen/_170sdp"
-            android:layout_height="wrap_content"
-            android:text="CFT"
-            android:layout_marginTop="@dimen/_10sdp"
-            android:layout_marginLeft="@dimen/_10sdp"
-            android:textSize="@dimen/_20sdp"
-            android:textColor="@color/black" />
+                <Button
+                    android:id="@+id/btnAddMore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_32sdp"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:text="Add More" />
 
-        <ImageView
-            android:layout_marginBottom="@dimen/_5sdp"
-            android:layout_marginTop="@dimen/_10sdp"
-            android:layout_gravity="center"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/vc_equals"/>
+                <Button
+                    android:id="@+id/btnRemove"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_32sdp"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:visibility="gone"
+                    android:text="Remove" />
 
-        <EditText
-            android:id="@+id/et_cft"
-            android:layout_marginBottom="@dimen/_5sdp"
-            android:layout_marginLeft="@dimen/_10sdp"
-            android:layout_marginTop="@dimen/_10sdp"
-            android:textColor="@color/black"
-            android:layout_gravity="center"
-            android:textColorHint="@color/Gray"
-            android:layout_weight="1"
-            android:layout_width="@dimen/_200sdp"
-            android:layout_height="wrap_content"
-            android:background="@drawable/grayborder"
-            />
-        <TextView
-            android:layout_marginBottom="@dimen/_5sdp"
-            android:layout_gravity="center"
-            android:layout_weight="1"
-            android:layout_width="@dimen/_240sdp"
-            android:layout_height="wrap_content"
-            android:text="Cubic feet"
-            android:layout_marginTop="@dimen/_10sdp"
-            android:layout_marginLeft="@dimen/_10sdp"
-            android:textSize="@dimen/_20sdp"
-            android:textColor="@color/black" />
-    </LinearLayout>
+                <Button
+                    android:id="@+id/btnReset"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_32sdp"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:text="Reset" />
+            </LinearLayout>
 
-    <View
-        android:layout_marginTop="@dimen/_5sdp"
-        android:layout_width="match_parent"
-        android:layout_height="0.5dp"
-        android:background="@color/black"/>
-    <LinearLayout
-        android:padding="@dimen/_3sdp"
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:orientation="horizontal">
 
-        <TextView
-            android:layout_marginBottom="@dimen/_5sdp"
-            android:layout_gravity="center"
-            android:layout_weight="1"
-            android:layout_width="@dimen/_150sdp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_5sdp"
-            android:textSize="@dimen/_15sdp"
-            android:textColor="@color/black" />
+                <TextView
+                    android:id="@+id/btnCbm"
+                    style="@style/txt_000_20"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/gradian_bg"
+                    android:gravity="center"
+                    android:padding="@dimen/padding_5dp"
+                    android:text="CBM" />
 
-        <TextView
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:text="Space"
-            android:layout_marginLeft="@dimen/_10sdp"
-            android:layout_marginTop="@dimen/_5sdp"
-            android:textColor="@color/black"
-            android:layout_weight="1"
-            android:layout_width="@dimen/_20sdp"
-            android:layout_height="wrap_content"
-            />
-        <TextView
-            android:text="Free Space"
-            android:layout_marginLeft="@dimen/_10sdp"
-            android:layout_marginTop="@dimen/_3sdp"
-            android:textColor="@color/black"
-            android:gravity="center"
-            android:layout_weight="1"
-            android:layout_width="@dimen/_20sdp"
-            android:layout_height="wrap_content"
-            />
-    </LinearLayout>
+                <TextView
+                    android:id="@+id/btnCft"
+                    style="@style/txt_000_20"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/gradian_bg"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="CFT" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/black" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/_5sdp">
+
+                <TextView
+                    android:id="@+id/tvCbm"
+                    style="@style/txt_000_20"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:drawablePadding="5dp"
+                    android:drawableRight="@drawable/vc_equals"
+                    android:text="CBM" />
 
 
-    <LinearLayout
-        android:padding="@dimen/_3sdp"
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/editCbm"
+                    style="@style/txt_000_20"
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@drawable/grayborder"
+                    android:textColorHint="@color/Gray" />
 
-        <TextView
-            android:layout_marginLeft="@dimen/_5sdp"
-            android:layout_marginTop="@dimen/_2sdp"
-            android:layout_marginBottom="@dimen/_5sdp"
-            android:layout_gravity="center"
-            android:layout_weight="1"
-            android:layout_width="@dimen/_150sdp"
-            android:layout_height="wrap_content"
-            android:text="20ft Container"
-            android:textSize="@dimen/_15sdp"
-            android:textColor="@color/black" />
+                <TextView
+                    style="@style/txt_000_20"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="right"
+                    android:paddingLeft="10dp"
+                    android:text="Cubic meter" />
+            </LinearLayout>
 
-        <EditText
-            android:layout_marginTop="@dimen/_2sdp"
-            android:layout_marginBottom="@dimen/_5sdp"
-            android:layout_marginLeft="@dimen/_10sdp"
-            android:textColor="@color/black"
-            android:layout_gravity="center"
-            android:textColorHint="@color/Gray"
-            android:layout_weight="1"
-            android:layout_width="@dimen/_20sdp"
-            android:layout_height="wrap_content"
-            android:background="@drawable/grayborder"
-            />
-        <EditText
-            android:layout_marginTop="@dimen/_2sdp"
-            android:layout_marginBottom="@dimen/_5sdp"
-            android:layout_marginLeft="@dimen/_10sdp"
-            android:textColor="@color/black"
-            android:layout_gravity="center"
-            android:textColorHint="@color/Gray"
-            android:layout_weight="1"
-            android:layout_width="@dimen/_20sdp"
-            android:layout_height="wrap_content"
-            android:background="@drawable/grayborder"
-            />
-    </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@color/black" />
 
-    <View
-        android:layout_marginTop="@dimen/_5sdp"
-        android:layout_width="match_parent"
-        android:layout_height="0.5dp"
-        android:background="@color/black"/>
-    <LinearLayout
-        android:padding="@dimen/_3sdp"
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/_5sdp">
 
-        <TextView
-            android:layout_marginLeft="@dimen/_5sdp"
-            android:layout_marginBottom="@dimen/_5sdp"
-            android:layout_gravity="center"
-            android:layout_weight="1"
-            android:layout_width="@dimen/_150sdp"
-            android:layout_height="wrap_content"
-            android:text="40ft Container"
-            android:layout_marginTop="@dimen/_5sdp"
-            android:textSize="@dimen/_15sdp"
-            android:textColor="@color/black" />
+                <TextView
+                    android:id="@+id/tvCft"
+                    style="@style/txt_000_20"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:drawablePadding="10dp"
+                    android:drawableRight="@drawable/vc_equals"
+                    android:text="CFT" />
 
-        <EditText
-            android:layout_marginBottom="@dimen/_5sdp"
-            android:layout_marginLeft="@dimen/_10sdp"
-            android:layout_marginTop="@dimen/_5sdp"
-            android:textColor="@color/black"
-            android:layout_gravity="center"
-            android:textColorHint="@color/Gray"
-            android:layout_weight="1"
-            android:layout_width="@dimen/_20sdp"
-            android:layout_height="wrap_content"
-            android:background="@drawable/grayborder"
-            />
-        <EditText
-            android:layout_marginBottom="@dimen/_5sdp"
-            android:layout_marginLeft="@dimen/_10sdp"
-            android:layout_marginTop="@dimen/_5sdp"
-            android:textColor="@color/black"
-            android:layout_gravity="center"
-            android:textColorHint="@color/Gray"
-            android:layout_weight="1"
-            android:layout_width="@dimen/_20sdp"
-            android:layout_height="wrap_content"
-            android:background="@drawable/grayborder"
-            />
-    </LinearLayout>
-    <View
-        android:layout_marginTop="@dimen/_5sdp"
-        android:layout_width="match_parent"
-        android:layout_height="0.5dp"
-        android:background="@color/black"/>
-    <LinearLayout
-        android:padding="@dimen/_3sdp"
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/editCft"
+                    style="@style/txt_000_20"
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@drawable/grayborder"
+                    android:textColorHint="@color/Gray" />
 
-        <TextView
-            android:layout_marginLeft="@dimen/_5sdp"
-            android:layout_marginBottom="@dimen/_5sdp"
-            android:layout_gravity="center"
-            android:layout_weight="1"
-            android:layout_width="@dimen/_150sdp"
-            android:layout_height="wrap_content"
-            android:text="40ft  HC Container"
-            android:layout_marginTop="@dimen/_5sdp"
-            android:textSize="@dimen/_15sdp"
-            android:textColor="@color/black" />
+                <TextView
+                    style="@style/txt_000_20"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="right"
+                    android:layout_marginRight="@dimen/_5sdp"
+                    android:paddingLeft="10dp"
+                    android:text="Cubic feet  " />
+            </LinearLayout>
 
-        <EditText
-            android:layout_marginBottom="@dimen/_5sdp"
-            android:layout_marginLeft="@dimen/_10sdp"
-            android:layout_marginTop="@dimen/_5sdp"
-            android:textColor="@color/black"
-            android:layout_gravity="center"
-            android:textColorHint="@color/Gray"
-            android:layout_weight="1"
-            android:layout_width="@dimen/_20sdp"
-            android:layout_height="wrap_content"
-            android:background="@drawable/grayborder"
-            />
-        <EditText
-            android:layout_marginBottom="@dimen/_5sdp"
-            android:layout_marginLeft="@dimen/_10sdp"
-            android:layout_marginTop="@dimen/_5sdp"
-            android:textColor="@color/black"
-            android:layout_gravity="center"
-            android:textColorHint="@color/Gray"
-            android:layout_weight="1"
-            android:layout_width="@dimen/_20sdp"
-            android:layout_height="wrap_content"
-            android:background="@drawable/grayborder"
-            />
-    </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@color/black" />
+
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TableRow android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textSize="@dimen/_15sdp" />
+
+                    <TextView
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:paddingLeft="20sp"
+                        android:paddingRight="20sp"
+                        android:text="Space"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:paddingLeft="20sp"
+                        android:paddingRight="20sp"
+                        android:text="Free Space"
+                        android:textColor="@color/black" />
+                </TableRow>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:background="@color/black" />
+
+                <TableRow android:layout_marginTop="10dp">
+
+                    <TextView
+                        style="@style/txt_000_20"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingLeft="5dp"
+                        android:text="20ft Container" />
+
+                    <TextView
+                        android:id="@+id/tvFirstFt"
+                        style="@style/txt_000_14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/grayborder"
+                        android:gravity="center"
+                        android:paddingLeft="20sp"
+                        android:paddingRight="20sp"
+                        android:paddingTop="10sp"
+                        android:text="28"
+                        android:textColorHint="@color/Gray" />
+
+                    <EditText
+                        android:id="@+id/editFirstFt"
+                        style="@style/txt_000_14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/grayborder"
+                        android:paddingLeft="20sp"
+                        android:paddingRight="20sp"
+                        android:paddingTop="10sp"
+                        android:textColorHint="@color/Gray" />
+                </TableRow>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:background="@color/black" />
+
+                <TableRow android:layout_marginTop="10dp">
+
+                    <TextView
+                        style="@style/txt_000_20"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingLeft="5dp"
+                        android:text="40ft Container" />
+
+                    <TextView
+                        android:id="@+id/tvSecondFt"
+                        style="@style/txt_000_14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/grayborder"
+                        android:gravity="center"
+                        android:paddingLeft="20sp"
+                        android:paddingRight="20sp"
+                        android:paddingTop="10sp"
+                        android:text="58"
+                        android:textColorHint="@color/Gray" />
+
+                    <EditText
+                        android:id="@+id/etSecondFt"
+                        style="@style/txt_000_14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/grayborder"
+                        android:paddingLeft="20sp"
+                        android:paddingRight="20sp"
+                        android:paddingTop="10sp"
+                        android:textColorHint="@color/Gray" />
+                </TableRow>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:background="@color/black" />
+
+                <TableRow
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        style="@style/txt_000_20"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="8dp"
+                        android:text="40ft  HC Container" />
+
+                    <TextView
+                        android:id="@+id/tvThirdFt"
+                        style="@style/txt_000_14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/grayborder"
+                        android:gravity="center"
+                        android:paddingLeft="20sp"
+                        android:paddingRight="20sp"
+                        android:paddingTop="10sp"
+                        android:text="58"
+                        android:textColorHint="@color/Gray" />
+                    <EditText
+                        android:id="@+id/etThirdFt"
+                        style="@style/txt_000_14"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/grayborder"
+                        android:paddingLeft="20sp"
+                        android:paddingRight="20sp"
+                        android:paddingTop="10sp"
+                        android:textColorHint="@color/Gray" />
+
+                </TableRow>
+
+            </TableLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
 
 </LinearLayout>
